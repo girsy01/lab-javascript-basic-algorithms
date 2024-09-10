@@ -47,6 +47,9 @@ else if (indexAlphabet2 < indexAlphabet1)
   console.log(`Yo, the navigator goes first, definitely.`);
 else console.log(`What?! You both have the same name?`);
 
+//Other way to compare: localeCompare()
+//just compare strings with hacker1 > hacker2
+
 //Bonus
 //Bonus 1
 const longText = `Et lorem ipsum dolor sit et amet, consectetur adipiscing elit. Quisque vel nulla porttitor, tempor erat ut, cursus ex. Maecenas lacinia diam vitae quam ornare molestie vel a justo. Fusce quam neque, finibus quis dolor sed, laoreet feugiat lorem. Duis ac purus at ex cursus blandit quis nec tortor. Vivamus ut egestas mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean blandit malesuada pulvinar.
