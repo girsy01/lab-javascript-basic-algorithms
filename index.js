@@ -20,13 +20,15 @@ else
 
 // Iteration 3: Loops
 //3.1
-let hacker1Caps = "";
+let hacker1Caps = "    ";
 for (let i = 0; i < hacker1.length; i++) {
-  hacker1Caps += hacker1[i].toUpperCase();
-  if (i < hacker1.length - 1) hacker1Caps += " ";
+  hacker1Caps += hacker1[i].toUpperCase() + ' ';
+  // if (i < hacker1.length - 1) hacker1Caps += " "; //Alternative: trim-Method!!
 }
-hacker1Caps += ".";
+hacker1Caps = hacker1Caps.trim(); //trim-method RETURNS A NEW STRING !!!!
+// hacker1Caps += ".";
 console.log(hacker1Caps);
+
 
 //3.2
 let hacker2Reverse = "";
@@ -116,19 +118,3 @@ for (let i = phraseClean.length - 1; i >= 0; i--) {
 if (phraseClean === phraseReverse)
   console.log(`Yes, '${phraseToCheck}' is a palindrome.`);
 else console.log(`Nope, '${phraseToCheck}' isn't a palindrome!`);
-
-function equal(a, b, c) {
-    const size = (new Set([a, b, c])).size;
-    console.log(`${a}, ${b}, ${c}: ${size}`)
-    if (size === 3) return 0;
-    return 4 - size;
-}
-
-console.log(equal(2, 3, 4), 0, "All values are differents\n");
-console.log(equal(7, 3, 7), 2, "Two values are equal\n");
-console.log(equal(4, 4, 4), 3, "All 3 values are equal\n");
-console.log(equal(7, 3, 4), 0, "All values are differents\n");
-console.log(equal(3, 3, 6), 2, "Two values are equal\n");
-console.log(equal(1, 1, 1), 3, "All 3 values are equal\n");
-console.log(equal(1, 7, 6), 0, "All values are differents\n");
-console.log(equal(7, 7, 7), 3, "All 3 values are equal\n");
