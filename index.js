@@ -22,13 +22,12 @@ else
 //3.1
 let hacker1Caps = "    ";
 for (let i = 0; i < hacker1.length; i++) {
-  hacker1Caps += hacker1[i].toUpperCase() + ' ';
+  hacker1Caps += hacker1[i].toUpperCase() + " ";
   // if (i < hacker1.length - 1) hacker1Caps += " "; //Alternative: trim-Method!!
 }
 hacker1Caps = hacker1Caps.trim(); //trim-method RETURNS A NEW STRING !!!!
 // hacker1Caps += ".";
 console.log(hacker1Caps);
-
 
 //3.2
 let hacker2Reverse = "";
@@ -62,13 +61,17 @@ let countWords = 1;
 let countEt = 0;
 let textLength = longText.length;
 for (let i = 0; i < textLength - 1; i++) {
+  
+  //check if its a new word
   if (longText[i] === " ") {
     countWords++;
+
     //String 'et' or 'Et' found
     if (
       (longText[i + 1] === "e" || longText[i + 1] === "E") &&
       longText[i + 2] === "t"
     ) {
+      
       //its not just the beginning of a word starting with 'et'
       if (
         longText[i + 3] === " " ||
@@ -87,6 +90,10 @@ if (longText[0] === "E" && longText[1] === "t" && longText[2] === " ")
 
 console.log(`Number of words in longText: ${countWords}`);
 console.log(`Number of et or Et in longText: ${countEt}`);
+
+//Alternative for word count
+const longArray = longText.split(" ");
+console.log(`Number of words (alternative way): ${longArray.length}`);
 
 //Bonus 2
 let phraseToCheck = `No 'x' in Nixon`;
